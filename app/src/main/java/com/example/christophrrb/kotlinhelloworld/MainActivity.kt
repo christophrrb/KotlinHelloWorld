@@ -21,4 +21,8 @@ class MainActivity : AppCompatActivity() {
             miTexto.text = resources.getString(R.string.hello_world);
         }
     }
+
+    fun ingresarNombre(v: View) {
+        miTexto.text = nombre.text;
+    }
 }
