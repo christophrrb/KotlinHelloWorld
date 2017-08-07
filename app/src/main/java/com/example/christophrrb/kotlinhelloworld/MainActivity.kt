@@ -7,8 +7,10 @@ import android.app.Activity
  import android.graphics.drawable.Drawable
  import android.view.View
  import android.widget.ImageView
+ import android.widget.Toast
  import com.example.christophrrb.kotlinhelloworld.R
 import kotlinx.android.synthetic.main.activity_main.*
+ import org.jetbrains.anko.toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,7 +36,11 @@ class MainActivity : AppCompatActivity() {
         if (imageView.visibility != View.VISIBLE) {
             imageView.visibility = View.VISIBLE;
         } else {
-            imageView.visibility = View.INVISIBLE
+            imageView.visibility = View.INVISIBLE;
         }
+    }
+
+    fun toast(v: View) {
+        toast("Tastes so good.");
     }
 }
