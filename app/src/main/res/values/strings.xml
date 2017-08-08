@@ -12,4 +12,10 @@
     <string name="bananas">Bananas</string>
     <string name="pears">Pears</string>
     <string name="mangoes">Mangoes</string>
+    <string name="grinning_face_with_smiling_eyes">😁</string>
+    <string name="crying_face">😢</string>
+    <string name="recorrer">Recorre Conmigo</string>
+
+    <!--Third Activity-->
+    <string name="dime">Dime Algo</string>
 </resources>
