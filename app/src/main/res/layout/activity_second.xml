@@ -15,9 +15,10 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/second_activity"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/second_activity" />
+        android:layout_marginTop="16dp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -26,4 +27,46 @@
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp" />
+
+    <RadioGroup
+
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup">
+
+        <RadioButton
+            android:id="@+id/bananas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="24dp"
+            android:text="@string/bananas" />
+
+        <RadioButton
+            android:id="@+id/pears"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/bananas"
+            android:layout_below="@+id/bananas"
+            android:text="@string/pears" />
+
+        <RadioButton
+            android:id="@+id/mangoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/pears"
+            android:layout_below="@+id/pears"
+            android:text="@string/mangoes" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="Button"
+            android:visibility="visible" />
+    </RadioGroup>
 </RelativeLayout>

@@ -9,4 +9,7 @@
     <!--Second Activity-->
     <string name="second_activity">Welcome to the Second Activity!</string>
     <string name="alert">Alert</string>
+    <string name="bananas">Bananas</string>
+    <string name="pears">Pears</string>
+    <string name="mangoes">Mangoes</string>
 </resources>
