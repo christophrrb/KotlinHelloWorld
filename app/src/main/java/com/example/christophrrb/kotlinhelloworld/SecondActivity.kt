@@ -37,7 +37,10 @@ class SecondActivity : AppCompatActivity() {
         }
 
         button5.setOnClickListener {
-            toast("I don't do anything yet. \uD83D\uDE42");
+            alert("Thank God I finally figured out how to use these things.", "Yay!") {
+                positiveButton("Cool Bro") {  }
+                negativeButton("Interesting") {  }
+            }.show()
         }
 
         //Spinner Code

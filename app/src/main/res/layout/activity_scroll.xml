@@ -19,7 +19,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="@string/dime"
-        android:layout_toStartOf="@+id/button8"/>
+        android:layout_toStartOf="@+id/button8" />
 
     <ListView
         android:id="@+id/listView"

@@ -2,6 +2,7 @@ package com.example.christophrrb.kotlinhelloworld
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.KeyEvent
 import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.activity_scroll.*
 
@@ -30,8 +31,6 @@ class Scroll : AppCompatActivity() {
             addToList();
         }
 
-        editText.setOnClickListener {
-            addToList();
-        }
+        editText.setImeActionLabel("You're Cool", KeyEvent.KEYCODE_ENTER);
         }
 }
