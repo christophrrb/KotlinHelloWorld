@@ -4,4 +4,9 @@
     <string name="hello_world">Hello World</string>
     <string name="submit">Submit</string>
     <string name="toast">Mmm...</string>
+    <string name="go_to_second_activity">Second Activity</string>
+
+    <!--Second Activity-->
+    <string name="second_activity">Welcome to the Second Activity!</string>
+    <string name="alert">Alert</string>
 </resources>
