@@ -12,6 +12,7 @@ import android.widget.RadioGroup
 import com.example.christophrrb.kotlinhelloworld.R
 import kotlinx.android.synthetic.main.activity_second.*
 import org.jetbrains.anko.*
+import java.sql.ResultSet
 
 class SecondActivity : AppCompatActivity() {
 
@@ -19,10 +20,15 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        val intent: Intent = getIntent();
-        var bundle: Bundle = intent.getExtras();
+        val intent: Intent? = getIntent();
+        if (intent!!.extras != null) {
+            var bundle: Bundle = intent.extras;
+            textView2.text = bundle.get("dato").toString() ?: "Couldn't receive text from previous activity.";
+        } else {
+            textView.text = resources.getString(R.string.no_bundle_text);
+        }
 
-        textView2.text = bundle.get("dato").toString() ?: "Couldn't receive text from previous activity.";
+
 
         //RadioGroup Code
         radioGroup.setOnCheckedChangeListener { group, checkedId ->
@@ -36,6 +42,7 @@ class SecondActivity : AppCompatActivity() {
             }
         }
 
+        //Dialog Box Code
         button5.setOnClickListener {
             alert("Thank God I finally figured out how to use these things.", "Yay!") {
                 positiveButton("Cool Bro") {  }
@@ -90,5 +97,47 @@ class SecondActivity : AppCompatActivity() {
             startActivity<Scroll>();
         }
 
+        //Checkbox Code
+        val drivingString:String = resources.getString(R.string.driving);
+        val busString:String = resources.getString(R.string.bus);
+        val walkingString:String = resources.getString(R.string.walking);
+        
+        booleanChecked.setOnClickListener {
+            var booleanResult: StringBuffer = StringBuffer();
+            booleanResult.append("$drivingString: ").append(driving.isChecked).append("\n");
+            booleanResult.append("$busString: ").append(bus.isChecked).append("\n");
+            booleanResult.append("$walkingString: ").append(walking.isChecked);
+            toast(booleanResult);
+        }
+        
+        textChecked.setOnClickListener {
+            var textResult: StringBuffer = StringBuffer();
+
+            if (driving.isChecked) {
+                textResult.append(drivingString);
+            }
+
+            if (bus.isChecked) {
+                textResult.append("\n $busString");
+            }
+
+            if (walking.isChecked) {
+                textResult.append("\n $walkingString");
+            }
+
+            toast(textResult);
+        }
+
+        //Autocomplete Code
+        val states:Array<String> = arrayOf("Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachussetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Mexico", "New Jersey", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming");
+
+        val arrayAdapter2 = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, states);
+        autoCompleteTextView.setAdapter(arrayAdapter2); //No property access syntax for this.
+        // autoCompleteTextView.threshold = 3; This would limit the suggestions to only appear after three characters have been typed.
+
+        //To CameraActivity
+        toCameraActivity.setOnClickListener {
+            startActivity<CameraActivity>();
         }
     }
+}

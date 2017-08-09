@@ -3,8 +3,13 @@ package com.example.christophrrb.kotlinhelloworld
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
+import android.view.View
 import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.activity_scroll.*
+import org.jetbrains.anko.toast
+import android.widget.Toast
+
+
 
 class Scroll : AppCompatActivity() {
 
@@ -16,21 +21,31 @@ class Scroll : AppCompatActivity() {
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems)
         listView.setAdapter(adapter)
 
-//        var text = ArrayList<String>();
-//
-//        var arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, text);
-//        listView.adapter = arrayAdapter;
-
-
         fun addToList() {
-            listItems.add(editText.text.toString());
-            adapter.notifyDataSetChanged();
+            if (editText.text.toString() != "") {
+                listItems.add(editText.text.toString());
+                adapter.notifyDataSetChanged();
+                editText.setText("");
+                listView.setSelection(adapter.getCount() - 1);
+            } else {
+                toast("Please enter text");
+            }
         }
+
 
         button8.setOnClickListener {
             addToList();
         }
 
-        editText.setImeActionLabel("You're Cool", KeyEvent.KEYCODE_ENTER);
+        //TODO have text enter on enter
+        editText.isFocusableInTouchMode = true;
+        editText.requestFocus();
+        editText.setOnKeyListener { view, i, keyEvent ->
+            if ((keyEvent.action == KeyEvent.ACTION_DOWN) && (keyEvent.action == KeyEvent.KEYCODE_ENTER)) {
+                addToList();
+                return@setOnKeyListener true
+            }
+            return@setOnKeyListener false
         }
+    }
 }

@@ -15,7 +15,18 @@
     <string name="grinning_face_with_smiling_eyes">😁</string>
     <string name="crying_face">😢</string>
     <string name="recorrer">Recorre Conmigo</string>
+    <string name="no_bundle_text">No Bundle Text!</string>
 
     <!--Third Activity-->
     <string name="dime">Dime Algo</string>
+    <string name="driving">Driving</string>
+    <string name="bus">Bus</string>
+    <string name="walking">Walking</string>
+    <string name="see_checked_boolean">Boolean Checked</string>
+    <string name="see_checked_text">Text Checked</string>
+    <string name="title_activity_camera">CameraActivity</string>
+
+    <!--Camera Activity-->
+    <string name="camera_permission">Camera Permission</string>
+    <string name="call_permission">Call Permission</string>
 </resources>

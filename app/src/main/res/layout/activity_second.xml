@@ -2,8 +2,9 @@
 
 
 <RelativeLayout
-    android:layout_width="344dp"
-    android:layout_height="495dp"
+    android:id="@+id/externalRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:layout_editor_absoluteY="8dp"
     tools:layout_editor_absoluteX="8dp"
     tools:context="com.example.christophrrb.kotlinhelloworld.SecondActivity"
@@ -11,90 +12,164 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/second_activity"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp" />
-
-    <RadioGroup
-
-        android:layout_marginTop="20dp"
+    <ScrollView
+        android:id="@+id/scrollViewforSecondActivity"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioGroup">
+        android:layout_height="match_parent">
 
-        <RadioButton
-            android:id="@+id/bananas"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/internalRelativeLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/textView2"
-            android:layout_marginTop="24dp"
-            android:text="@string/bananas" />
+            tools:layout_editor_absoluteY="8dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:context="com.example.christophrrb.kotlinhelloworld.SecondActivity"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <RadioButton
-            android:id="@+id/pears"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/bananas"
-            android:layout_below="@+id/bananas"
-            android:text="@string/pears" />
+            <AutoCompleteTextView android:id="@+id/autoCompleteTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/walking"
+                android:layout_marginTop="20dp"
+                android:hint="Enter State Here"/>
 
-        <RadioButton
-            android:id="@+id/mangoes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/pears"
-            android:layout_below="@+id/pears"
-            android:text="@string/mangoes" />
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:text="@string/recorrer"
+                android:layout_below="@+id/switch1" />
 
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:enabled="false"
-            android:gravity="center"
-            android:text="Button"
-            android:visibility="visible" />
-    </RadioGroup>
+            <RadioGroup
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/radioGroup"
-        android:layout_marginTop="17dp" />
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/spinner"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
-        android:text="@string/crying_face"
-        android:textOff="@string/crying_face"
-        android:textOn="@string/grinning_face_with_smiling_eyes" />
+                <RadioButton
+                    android:id="@+id/bananas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView2"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/bananas" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/switch1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:text="@string/recorrer" />
+                <RadioButton
+                    android:id="@+id/pears"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/bananas"
+                    android:layout_below="@+id/bananas"
+                    android:text="@string/pears" />
+
+                <RadioButton
+                    android:id="@+id/mangoes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/pears"
+                    android:layout_below="@+id/pears"
+                    android:text="@string/mangoes" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="Button"
+                    android:visibility="visible" />
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/bus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bus"
+                android:layout_below="@+id/driving"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:id="@+id/booleanChecked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/driving"
+                android:layout_marginStart="13dp"
+                android:layout_toEndOf="@+id/switch1"
+                android:text="@string/see_checked_boolean" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="@string/second_activity" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_above="@+id/radioGroup"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp" />
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner"
+                android:layout_marginTop="18dp"
+                android:text="@string/crying_face"
+                android:textOn="@string/grinning_face_with_smiling_eyes"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/textChecked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/see_checked_text"
+                android:layout_below="@+id/booleanChecked"
+                android:layout_alignStart="@+id/booleanChecked" />
+
+            <CheckBox
+                android:id="@+id/walking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/walking"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/bus"
+                android:layout_toStartOf="@+id/booleanChecked" />
+
+            <CheckBox
+                android:id="@+id/driving"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:text="@string/driving"
+                android:layout_below="@+id/button6"
+                android:layout_alignParentStart="true" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/radioGroup"
+                android:layout_marginTop="17dp" />
+
+            <Button
+                android:id="@+id/toCameraActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/autoCompleteTextView"/>
+        </RelativeLayout>
+    </ScrollView>
+
 </RelativeLayout>
