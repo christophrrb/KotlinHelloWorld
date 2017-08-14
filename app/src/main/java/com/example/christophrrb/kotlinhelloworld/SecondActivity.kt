@@ -139,5 +139,15 @@ class SecondActivity : AppCompatActivity() {
         toCameraActivity.setOnClickListener {
             startActivity<CameraActivity>();
         }
+
+        //Personalized ListView
+        personalizedListView.setOnClickListener {
+            startActivity<PersonalizedListView>();
+        }
+
+        //WebView
+        webViewActivityButton.setOnClickListener {
+            startActivity<WebView>();
+        }
     }
 }

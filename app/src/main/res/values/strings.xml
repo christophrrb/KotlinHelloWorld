@@ -16,6 +16,7 @@
     <string name="crying_face">😢</string>
     <string name="recorrer">Recorre Conmigo</string>
     <string name="no_bundle_text">No Bundle Text!</string>
+    <string name="webview">WebView</string>
 
     <!--Third Activity-->
     <string name="dime">Dime Algo</string>
@@ -29,4 +30,8 @@
     <!--Camera Activity-->
     <string name="camera_permission">Camera Permission</string>
     <string name="call_permission">Call Permission</string>
+
+    <!--Personalized ListView-->
+    <string name="personalized_list_view">Personalized ListView</string>
+    <string name="encabezado">Encabezado</string>
 </resources>

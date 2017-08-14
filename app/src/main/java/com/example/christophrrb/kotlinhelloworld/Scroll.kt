@@ -47,5 +47,9 @@ class Scroll : AppCompatActivity() {
             }
             return@setOnKeyListener false
         }
+
+        listView.setOnItemClickListener { adapterView, view, i, l ->
+            toast("This is item #${i + 1} in the ListView.");
+        }
     }
 }

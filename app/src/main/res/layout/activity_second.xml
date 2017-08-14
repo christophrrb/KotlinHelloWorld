@@ -166,9 +166,24 @@
 
             <Button
                 android:id="@+id/toCameraActivity"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/autoCompleteTextView"/>
+                android:layout_below="@+id/autoCompleteTextView"
+                android:text="Camera Activity"/>
+
+            <Button
+                android:id="@+id/personalizedListView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/toCameraActivity"
+                android:layout_alignBaseline="@+id/toCameraActivity"
+                android:text="@string/personalized_list_view"/>
+            <Button
+                android:id="@+id/webViewActivityButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/webview"
+                android:layout_below="@id/personalizedListView"/>
         </RelativeLayout>
     </ScrollView>
 
