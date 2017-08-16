@@ -50,8 +50,14 @@
         </activity>
         <activity
             android:name=".PersonalizedListView"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".WebView"></activity>
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".WebView"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MusicActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".Fragment"></activity>
     </application>
 
 </manifest>

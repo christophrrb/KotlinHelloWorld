@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.christophrrb.kotlinhelloworld.Fragment"
+    android:orientation="horizontal"
+    android:weightSum="1">
+    <!--Don't forget to add a weight sum!-->
+
+    <fragment
+        android:id="@+id/fragmentA"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        class="com.example.christophrrb.kotlinhelloworld.fragmentA"
+        android:layout_weight=".5"/>
+    <fragment
+        android:id="@+id/fragmentB"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        class="com.example.christophrrb.kotlinhelloworld.fragmentB"
+        android:layout_weight=".5"/>
+</LinearLayout>

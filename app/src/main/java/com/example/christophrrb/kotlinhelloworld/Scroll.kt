@@ -22,10 +22,10 @@ class Scroll : AppCompatActivity() {
         listView.setAdapter(adapter)
 
         fun addToList() {
-            if (editText.text.toString() != "") {
-                listItems.add(editText.text.toString());
+            if (scrollEditText.text.toString() != "") {
+                listItems.add(scrollEditText.text.toString());
                 adapter.notifyDataSetChanged();
-                editText.setText("");
+                scrollEditText.setText("");
                 listView.setSelection(adapter.getCount() - 1);
             } else {
                 toast("Please enter text");
@@ -38,9 +38,9 @@ class Scroll : AppCompatActivity() {
         }
 
         //TODO have text enter on enter
-        editText.isFocusableInTouchMode = true;
-        editText.requestFocus();
-        editText.setOnKeyListener { view, i, keyEvent ->
+        scrollEditText.isFocusableInTouchMode = true;
+        scrollEditText.requestFocus();
+        scrollEditText.setOnKeyListener { view, i, keyEvent ->
             if ((keyEvent.action == KeyEvent.ACTION_DOWN) && (keyEvent.action == KeyEvent.KEYCODE_ENTER)) {
                 addToList();
                 return@setOnKeyListener true

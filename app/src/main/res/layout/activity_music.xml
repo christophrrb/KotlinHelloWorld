@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.christophrrb.kotlinhelloworld.MusicActivity">
+    tools:context="com.example.christophrrb.kotlinhelloworld.MusicActivity"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/playMusic"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/play_music"/>
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/stopMusic"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/stop_music"/>
+
+    <Button
+        android:id="@+id/toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/toggle"/>
+</LinearLayout>

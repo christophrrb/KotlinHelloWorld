@@ -6,11 +6,15 @@ import android.app.Activity
  import android.content.Context
  import android.content.Intent
  import android.graphics.drawable.Drawable
+ import android.text.Editable
+ import android.text.TextWatcher
  import android.view.View
  import android.widget.ImageView
  import android.widget.Toast
  import com.example.christophrrb.kotlinhelloworld.R
-import kotlinx.android.synthetic.main.activity_main.*
+ import com.pawegio.kandroid.textWatcher
+ import kotlinx.android.synthetic.main.activity_main.*
+ import kotlinx.android.synthetic.main.activity_scroll.*
  import org.jetbrains.anko.*
 
 class MainActivity : AppCompatActivity() {
@@ -24,7 +28,31 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, SecondActivity::class.java)
             intent.putExtra("dato", nombre.text)
             startActivity(intent)
+
+            /*Use a bundle to transfer bigger/more complicated data between activities.
+
+            var intent = Intent(this@MainActivity, ActivityToGoTo);
+            var bundle = Bundle();
+
+            bundle.putInt("myInt", 1);
+            bundle.putString("myString", "1");
+            bundle.putBoolean("myBoolean", true);
+            bundle.putChar("myChar", "a");
+            bundle.putDouble("myDouble", 1.00);
+
+            intent.putExtra("bun", bundle);
+            startActivity(intent);
+
+            Some of the put..()s might be wrong, but it's not too far off. It might be something like putBool() instead of putBoolean().
+             */
         }
+
+        nombre.textWatcher {
+                beforeTextChanged { charSequence, i, j, k ->  }
+                onTextChanged { charSequence, i, j, k -> toast("Text was changed."); }
+                afterTextChanged { charSequence -> }
+        }
+
     }
 
     fun cambiarTexto(v: View) {
@@ -50,14 +78,4 @@ class MainActivity : AppCompatActivity() {
     fun toast(v: View) {
         toast("Tastes so good.");
     }
-
-//    companion object {
-//
-//        fun segundaActividad(nombre: String, context: Context): Intent {
-//            var dato: String = nombre;
-//            val intent: Intent = Intent(context, SecondActivity::class.java);
-//            intent.putExtra("nombre", nombre);
-//            return intent;
-//        }
-//    }
 }

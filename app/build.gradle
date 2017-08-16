@@ -32,5 +32,6 @@ dependencies {
     compile 'org.jetbrains.anko:anko-common:0.8.3'
     compile 'com.android.support:design:26.+'
     compile 'io.vrinda.kotlinpermissions:kotlinpermissions:1.1'
+    compile 'com.pawegio.kandroid:kandroid:0.8.3@aar'
     testCompile 'junit:junit:4.12'
 }

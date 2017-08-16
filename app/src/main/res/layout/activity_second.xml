@@ -184,7 +184,22 @@
                 android:layout_height="wrap_content"
                 android:text="@string/webview"
                 android:layout_below="@id/personalizedListView"/>
+
+            <Button
+                android:id="@+id/toMusicActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/webViewActivityButton"
+                android:layout_alignBottom="@+id/webViewActivityButton"
+                android:text="@string/to_music_activity"/>
+
+            <Button
+                android:id="@+id/toFragmentActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/to_fragment_activity"
+                android:layout_toRightOf="@+id/toMusicActivity"
+                android:layout_alignBottom="@+id/toMusicActivity"/>
         </RelativeLayout>
     </ScrollView>
-
 </RelativeLayout>

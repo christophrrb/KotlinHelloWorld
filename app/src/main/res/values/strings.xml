@@ -17,6 +17,8 @@
     <string name="recorrer">Recorre Conmigo</string>
     <string name="no_bundle_text">No Bundle Text!</string>
     <string name="webview">WebView</string>
+    <string name="to_music_activity">Music Activity</string>
+    <string name="to_fragment_activity">Fragment Activity</string>
 
     <!--Third Activity-->
     <string name="dime">Dime Algo</string>
@@ -34,4 +36,9 @@
     <!--Personalized ListView-->
     <string name="personalized_list_view">Personalized ListView</string>
     <string name="encabezado">Encabezado</string>
+
+    <!--Music Activity-->
+    <string name="play_music">Play</string>
+    <string name="stop_music">Stop</string>
+    <string name="toggle">Toggle</string>
 </resources>

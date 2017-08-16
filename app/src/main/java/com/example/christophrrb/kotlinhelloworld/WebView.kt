@@ -18,7 +18,8 @@ class WebView : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= 19) {
             webView.settings.cacheMode = WebSettings.LOAD_NO_CACHE;
             webView.loadUrl("http://phandroid.com");
-            //"file:///android_asset/file_name.html (for local files in Android folder)
+            /*"file:///android_asset/file_name.html (for local files in Android folder)
+            Watch José Luján's 39th video to see how to add JavaScript.*/
         } else {
             webView.loadUrl("http://phandroid.com");
         }

@@ -149,5 +149,15 @@ class SecondActivity : AppCompatActivity() {
         webViewActivityButton.setOnClickListener {
             startActivity<WebView>();
         }
+
+        //To MusicActivity
+        toMusicActivity.setOnClickListener {
+            startActivity<MusicActivity>();
+        }
+
+        //To Fragment Activity
+        toFragmentActivity.setOnClickListener {
+            startActivity<Fragment>();
+        }
     }
 }
