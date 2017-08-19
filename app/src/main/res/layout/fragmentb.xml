@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:text="What's App?"
+        android:id="@+id/output"
+        android:text="I'll catch the text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </LinearLayout>

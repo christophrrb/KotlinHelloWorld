@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:text="Fragment A!"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/input"
+        android:hint="Pass this text to fragment B."
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/inputButton"
+        android:text="Send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
 </LinearLayout>
